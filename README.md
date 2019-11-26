@@ -14,7 +14,6 @@ Learn how to develop a CRUD (Create, Read, Update, Delete) Web Application using
 ## Tools and technologies used
 
 ### Server-side technologies
-
 * Spring Boot - 2.2.1.RELEASE
 * JDK - 1.11
 * Spring Framework - 5.0.8 RELEASE
@@ -22,6 +21,14 @@ Learn how to develop a CRUD (Create, Read, Update, Delete) Web Application using
 * Spring Data JPA - 2+
 
 ## Tools
-
 * Maven - 3.2+
 
+### Spring Boot CRUD Rest APIs Development
+
+| API Name         | Path                  |     Status Code   |    Description               |
+| ----------- | ----------- |  ----------- |  ----------- |
+| GET Employees   | /api/v1/employees      | 200 (OK)          | All employees are fetched    |
+| POST Employee   | /api/v1/employees      | 201 (Created)     | Create new Employee resource |
+| GET Employee    | /api/v1/employees/{id} | 200 (OK)          | One Employee is fetched      |
+| PUT Employee    | /api/v1/employees/{id} | 200 (OK)          | Employee resource is updated |
+| DELETE Employee | /api/v1/employees/{id} | 204 (No Content)  | Create new Employee resource |

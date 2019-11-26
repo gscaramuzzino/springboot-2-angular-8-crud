@@ -3,12 +3,20 @@ package com.giusescara.tutorial.springboot2angular8crud.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "EMPLOYEES")
 public class Employee {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @Column(name = "firs_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "email_address", nullable = false, unique = true)
     private String email;
 
     public Employee() {
@@ -20,8 +28,6 @@ public class Employee {
         this.email = email;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     public long getId() {
         return id;
     }
@@ -30,7 +36,6 @@ public class Employee {
         this.id = id;
     }
 
-    @Column(name = "firstName", nullable = false)
     public String getFirstName() {
         return firstName;
     }
@@ -39,7 +44,6 @@ public class Employee {
         this.firstName = firstName;
     }
 
-    @Column(name = "lastName", nullable = false)
     public String getLastName() {
         return lastName;
     }
@@ -48,11 +52,9 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    @Column(name = "email_address", nullable = false, unique = true)
     public String getEmail() {
         return email;
     }
-
 
     public void setEmail(String email) {
         this.email = email;
