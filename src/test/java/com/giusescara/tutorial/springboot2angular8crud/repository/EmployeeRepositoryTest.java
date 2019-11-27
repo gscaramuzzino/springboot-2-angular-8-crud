@@ -4,20 +4,17 @@ import com.giusescara.tutorial.springboot2angular8crud.exception.ResourceNotFoun
 import com.giusescara.tutorial.springboot2angular8crud.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Ignore
 @DataJpaTest
 class EmployeeRepositoryTest {
 
     @Autowired
     private EmployeeRepository repository;
-
-    public void testNullPointerException() {
-        String name = getName();
-        System.out.println(name.length());
-    }
 
     private String getName() {
         return null;

@@ -3,7 +3,9 @@ package com.giusescara.tutorial.springboot2angular8crud.controller;
 import com.giusescara.tutorial.springboot2angular8crud.Application;
 import com.giusescara.tutorial.springboot2angular8crud.model.Employee;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -12,9 +14,11 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class EmployeeControllerTest {
 
@@ -42,6 +46,7 @@ class EmployeeControllerTest {
     }
 
     @Test
+    @RepeatedTest(5)
     void createEmployee() {
         Employee employee = new Employee();
         employee.setFirstName("FirstName");
