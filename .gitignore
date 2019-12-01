@@ -4,3 +4,4 @@
 /springboot-2-server/mvnw.cmd
 /target/
 /test.mv.db
+node_modules/
