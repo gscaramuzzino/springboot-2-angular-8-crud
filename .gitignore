@@ -1,6 +1,6 @@
 /.idea/
-/HELP.md
-/mvnw
-/mvnw.cmd
+/springboot-2-server/HELP.md
+/springboot-2-server/mvnw
+/springboot-2-server/mvnw.cmd
 /target/
 /test.mv.db
